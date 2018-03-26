@@ -13,7 +13,7 @@ Deposit::~Deposit()
     delete ui;
 }
 
-void Deposit::on_buttonBack_clicked()
+void Deposit::on_buttonClose_clicked()
 {
     hide();
 }

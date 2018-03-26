@@ -15,9 +15,7 @@ public:
     explicit CheckingDialog(QWidget *parent = 0);
     ~CheckingDialog();
 
-
 private slots:
-
     void on_buttonOK_clicked();
 
 private:

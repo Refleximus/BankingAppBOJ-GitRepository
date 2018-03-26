@@ -16,7 +16,7 @@ public:
     ~Deposit();
 
 private slots:
-    void on_buttonBack_clicked();
+    void on_buttonClose_clicked();
 
 private:
     Ui::Deposit *ui;

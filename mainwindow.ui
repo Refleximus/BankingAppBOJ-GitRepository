@@ -79,85 +79,7 @@
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QPushButton" name="buttonWithdraw">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>120</y>
-      <width>121</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Withdraw Funds</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="buttonDeposit">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>150</y>
-      <width>121</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Deposit Funds</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="buttonTransferpushButton_3">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>180</y>
-      <width>121</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Transfer Funds</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="buttonChecking">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>210</y>
-      <width>121</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Checking Account</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="buttonSavings">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>240</y>
-      <width>121</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Savings Account</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="buttonHistory">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>270</y>
-      <width>121</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Transaction History</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="buttonSwitchUser">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -170,7 +92,7 @@
      <string>Switch User</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="buttonLogout">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -183,7 +105,7 @@
      <string>Logout</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="buttonSettings">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -227,6 +149,60 @@
     <property name="text">
      <string/>
     </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>120</y>
+      <width>160</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="buttonChecking">
+       <property name="text">
+        <string>Checking Account</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="buttonSavings">
+       <property name="text">
+        <string>Savings Account</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="buttonWithdraw">
+       <property name="text">
+        <string>Withdraw Funds</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="buttonDeposit">
+       <property name="text">
+        <string>Deposit Funds</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="buttonTransfer">
+       <property name="text">
+        <string>Transfer Funds</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="buttonHistory">
+       <property name="text">
+        <string>Transaction History</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">

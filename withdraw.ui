@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Deposit</class>
- <widget class="QDialog" name="Deposit">
+ <class>Withdraw</class>
+ <widget class="QDialog" name="Withdraw">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,9 +11,9 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Deposit Funds</string>
+   <string>Withdraw Funds</string>
   </property>
-  <widget class="QLabel" name="labelDepositWhere">
+  <widget class="QLabel" name="labelWithdrawWhere">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Select the account you would like to deposit funds into:</string>
+    <string>Select the account you would like to withdraw funds from:</string>
    </property>
   </widget>
   <widget class="QWidget" name="verticalLayoutWidget">
@@ -52,7 +52,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QDoubleSpinBox" name="doubleBoxDepositValue">
+  <widget class="QDoubleSpinBox" name="doubleBoxWithdrawValue">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -71,7 +71,7 @@
     <double>0.000000000000000</double>
    </property>
   </widget>
-  <widget class="QLabel" name="labelDepositAmount">
+  <widget class="QLabel" name="labelWithdrawAmount">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -81,7 +81,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Amount to deposit in dollars: $</string>
+    <string>Amount to withdraw in dollars: $</string>
    </property>
   </widget>
   <widget class="QWidget" name="horizontalLayoutWidget">
@@ -95,9 +95,9 @@
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="buttonWithdrawGO">
       <property name="text">
-       <string>Deposit</string>
+       <string>Withdraw</string>
       </property>
      </widget>
     </item>

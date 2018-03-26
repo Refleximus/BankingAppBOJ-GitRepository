@@ -5,6 +5,9 @@
 #include "checkingdialog.h"
 #include "savingsdialog.h"
 #include "deposit.h"
+#include "transfer.h"
+#include "transhistory.h"
+#include "withdraw.h"
 
 namespace Ui {
 class MainWindow;
@@ -22,19 +25,26 @@ public:
 
 private slots:
 
-
     void on_buttonChecking_clicked();
 
     void on_buttonSavings_clicked();
 
     void on_buttonDeposit_clicked();
 
+    void on_buttonTransfer_clicked();
+
+    void on_buttonHistory_clicked();
+
+    void on_buttonWithdraw_clicked();
+
 private:
     Ui::MainWindow *ui;
     CheckingDialog *checkingDialog;
     SavingsDialog *savingsDialog;
     Deposit *deposit;
-
+    Transfer *transfer;
+    TransHistory *transHistory;
+    Withdraw *withdraw;
 };
 
 #endif // MAINWINDOW_H

@@ -18,10 +18,10 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_buttonChecking_clicked()
 {
-//    MODAL APPROACH
-//    CheckingDialog checkingDialog;
-//    //checkingDialog.setModal(true);        //this causes THIS window to be the only window able to be clicked upon.
-//    checkingDialog.exec();
+//  MODAL APPROACH
+//  CheckingDialog checkingDialog;
+//  checkingDialog.setModal(true);        //this causes THIS window to be the only window able to be clicked upon.
+//  checkingDialog.exec();
 
 //  MODALESS APPROACH
     checkingDialog = new CheckingDialog(this);
@@ -38,4 +38,22 @@ void MainWindow::on_buttonDeposit_clicked()
 {
     deposit = new Deposit(this);
     deposit->show();
+}
+
+void MainWindow::on_buttonTransfer_clicked()
+{
+    transfer = new Transfer(this);
+    transfer->show();
+}
+
+void MainWindow::on_buttonHistory_clicked()
+{
+    transHistory = new TransHistory(this);
+    transHistory->show();
+}
+
+void MainWindow::on_buttonWithdraw_clicked()
+{
+    withdraw = new Withdraw(this);
+    withdraw->show();
 }

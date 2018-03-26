@@ -9,7 +9,6 @@ CheckingDialog::CheckingDialog(QWidget *parent) :
 {
     ui->setupUi(this);
 
-
 }
 
 CheckingDialog::~CheckingDialog()

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Deposit</class>
- <widget class="QDialog" name="Deposit">
+ <class>Transfer</class>
+ <widget class="QDialog" name="Transfer">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,9 +11,9 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Deposit Funds</string>
+   <string>Transfer Funds</string>
   </property>
-  <widget class="QLabel" name="labelDepositWhere">
+  <widget class="QLabel" name="labelTransferWhere">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Select the account you would like to deposit funds into:</string>
+    <string>In which direction would you like to transfer funds?</string>
    </property>
   </widget>
   <widget class="QWidget" name="verticalLayoutWidget">
@@ -32,31 +32,57 @@
      <x>40</x>
      <y>70</y>
      <width>160</width>
-     <height>100</height>
+     <height>80</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
-     <widget class="QRadioButton" name="radioChecking">
+     <widget class="QRadioButton" name="radioFSTC">
       <property name="text">
-       <string>Checking Account</string>
+       <string>From Savings to Checking.</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QRadioButton" name="radioSavings">
+     <widget class="QRadioButton" name="radioFCTS">
       <property name="text">
-       <string>Savings Account</string>
+       <string>From Checking to Savings</string>
       </property>
      </widget>
     </item>
    </layout>
   </widget>
-  <widget class="QDoubleSpinBox" name="doubleBoxDepositValue">
+  <widget class="QWidget" name="horizontalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>220</y>
+     <width>168</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QPushButton" name="buttonTransferGO">
+      <property name="text">
+       <string>Transfer</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="buttonClose">
+      <property name="text">
+       <string>Close</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QDoubleSpinBox" name="doubleBoxTransferValue">
    <property name="geometry">
     <rect>
      <x>210</x>
-     <y>178</y>
+     <y>168</y>
      <width>111</width>
      <height>22</height>
     </rect>
@@ -71,44 +97,18 @@
     <double>0.000000000000000</double>
    </property>
   </widget>
-  <widget class="QLabel" name="labelDepositAmount">
+  <widget class="QLabel" name="labelTransferAmount">
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>180</y>
+     <y>170</y>
      <width>161</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>Amount to deposit in dollars: $</string>
+    <string>Amount to transfer in dollars: $</string>
    </property>
-  </widget>
-  <widget class="QWidget" name="horizontalLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>200</x>
-     <y>220</y>
-     <width>168</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <item>
-     <widget class="QPushButton" name="pushButton">
-      <property name="text">
-       <string>Deposit</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="buttonClose">
-      <property name="text">
-       <string>Close</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
   </widget>
  </widget>
  <resources/>

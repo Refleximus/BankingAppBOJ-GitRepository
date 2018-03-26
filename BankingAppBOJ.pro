@@ -28,16 +28,25 @@ SOURCES += \
         mainwindow.cpp \
     checkingdialog.cpp \
     savingsdialog.cpp \
-    deposit.cpp
+    deposit.cpp \
+    transfer.cpp \
+    transhistory.cpp \
+    withdraw.cpp
 
 HEADERS += \
         mainwindow.h \
     checkingdialog.h \
     savingsdialog.h \
-    deposit.h
+    deposit.h \
+    transfer.h \
+    transhistory.h \
+    withdraw.h
 
 FORMS += \
         mainwindow.ui \
     checkingdialog.ui \
     savingsdialog.ui \
-    deposit.ui
+    deposit.ui \
+    transfer.ui \
+    transhistory.ui \
+    withdraw.ui
