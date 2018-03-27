@@ -57,3 +57,29 @@ void MainWindow::on_buttonWithdraw_clicked()
     withdraw = new Withdraw(this);
     withdraw->show();
 }
+
+//==================================================================================
+void MainWindow::on_pushButton_clicked()            //TEST MANIPULATING MONEY VALUES
+{
+    checkingBalance = checkingBalance + 1;
+    ui->labelCBalValue->setNum(checkingBalance);
+}
+
+void MainWindow::on_pushButton_3_clicked()          //TEST MANIPULATING MONEY VALUES
+{
+    checkingBalance = checkingBalance - 1;
+    ui->labelCBalValue->setNum(checkingBalance);
+}
+
+void MainWindow::on_pushButton_2_clicked()          //TEST MANIPULATING MONEY VALUES
+{
+    savingsBalance = savingsBalance + 1;
+    ui->labelSBalValue->setNum(savingsBalance);
+}
+
+void MainWindow::on_pushButton_4_clicked()          //TEST MANIPULATING MONEY VALUES
+{
+    savingsBalance = savingsBalance - 1;
+    ui->labelSBalValue->setNum(savingsBalance);
+}
+//==================================================================================
