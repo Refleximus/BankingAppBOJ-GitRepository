@@ -32,7 +32,8 @@ SOURCES += \
     deposit.cpp \
     transfer.cpp \
     transhistory.cpp \
-    withdraw.cpp
+    withdraw.cpp \
+    error001.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -41,7 +42,8 @@ HEADERS += \
     deposit.h \
     transfer.h \
     transhistory.h \
-    withdraw.h
+    withdraw.h \
+    error001.h
 
 FORMS += \
         mainwindow.ui \
@@ -50,6 +52,7 @@ FORMS += \
     deposit.ui \
     transfer.ui \
     transhistory.ui \
-    withdraw.ui
+    withdraw.ui \
+    error001.ui
 
 DISTFILES +=

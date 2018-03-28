@@ -15,5 +15,5 @@ Deposit::~Deposit()
 
 void Deposit::on_buttonClose_clicked()
 {
-    hide();
+    close();
 }

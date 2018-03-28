@@ -18,5 +18,5 @@ CheckingDialog::~CheckingDialog()
 
 void CheckingDialog::on_buttonOK_clicked()
 {
-    hide();
+    close();
 }

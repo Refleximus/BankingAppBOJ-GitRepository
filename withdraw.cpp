@@ -15,5 +15,5 @@ Withdraw::~Withdraw()
 
 void Withdraw::on_buttonClose_clicked()
 {
-    hide();
+    close();
 }

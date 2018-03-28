@@ -1,7 +1,6 @@
 #include "savingsdialog.h"
 #include "ui_savingsdialog.h"
 
-
 SavingsDialog::SavingsDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::SavingsDialog)
@@ -17,5 +16,5 @@ SavingsDialog::~SavingsDialog()
 
 void SavingsDialog::on_buttonOKSavings_clicked()
 {
-    hide();
+    close();
 }

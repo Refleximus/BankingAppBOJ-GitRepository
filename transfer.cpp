@@ -15,5 +15,5 @@ Transfer::~Transfer()
 
 void Transfer::on_buttonClose_clicked()
 {
-    hide();
+    close();
 }

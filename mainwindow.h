@@ -8,6 +8,8 @@
 #include "transfer.h"
 #include "transhistory.h"
 #include "withdraw.h"
+#include "error001.h"
+
 
 namespace Ui {
 class MainWindow;
@@ -45,6 +47,10 @@ private slots:
 
     void on_pushButton_4_clicked();
 
+
+
+    void on_buttonLogout_clicked();
+
 private:
     Ui::MainWindow *ui;
     CheckingDialog *checkingDialog;
@@ -53,6 +59,7 @@ private:
     Transfer *transfer;
     TransHistory *transHistory;
     Withdraw *withdraw;
+    Error001 *error001;
 };
 
 #endif // MAINWINDOW_H

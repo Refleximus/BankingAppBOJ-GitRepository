@@ -15,5 +15,5 @@ TransHistory::~TransHistory()
 
 void TransHistory::on_buttonClose_clicked()
 {
-    hide();
+    close();
 }

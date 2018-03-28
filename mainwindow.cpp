@@ -19,45 +19,76 @@ MainWindow::~MainWindow()
 void MainWindow::on_buttonChecking_clicked()
 {
 //  MODAL APPROACH
-//  CheckingDialog checkingDialog;
-//  checkingDialog.setModal(true);        //this causes THIS window to be the only window able to be clicked upon.
-//  checkingDialog.exec();
+    CheckingDialog checkingDialog;
+    checkingDialog.setModal(true);        //this causes THIS window to be the only window able to be clicked upon.
+    checkingDialog.exec();
 
 //  MODALESS APPROACH
-    checkingDialog = new CheckingDialog(this);
-    checkingDialog->show();
+//    checkingDialog = new CheckingDialog(this);
+//    checkingDialog->show();
 }
 
 void MainWindow::on_buttonSavings_clicked()
 {
-    savingsDialog = new SavingsDialog(this);
-    savingsDialog->show();
+//  MODALESS
+//    savingsDialog = new SavingsDialog(this);
+//    savingsDialog->show();
+
+//  MODAL
+    SavingsDialog savingsDialog;
+    savingsDialog.setModal(true);
+    savingsDialog.exec();
 }
 
 void MainWindow::on_buttonDeposit_clicked()
 {
-    deposit = new Deposit(this);
-    deposit->show();
+//  MODALESS
+//    deposit = new Deposit(this);
+//    deposit->show();
+
+//  MODAL
+    Deposit deposit;
+    deposit.setModal(true);
+    deposit.exec();
 }
 
 void MainWindow::on_buttonTransfer_clicked()
 {
-    transfer = new Transfer(this);
-    transfer->show();
+//  MODALESS
+//    transfer = new Transfer(this);
+//    transfer->show();
+
+    Transfer transfer;
+    transfer.setModal(true);
+    transfer.exec();
 }
 
 void MainWindow::on_buttonHistory_clicked()
 {
-    transHistory = new TransHistory(this);
-    transHistory->show();
+//  MODALESS
+//    transHistory = new TransHistory(this);
+//    transHistory->show();
+
+//  MODAL
+    TransHistory transhistory;
+    transhistory.setModal(true);
+    transhistory.exec();
 }
 
 void MainWindow::on_buttonWithdraw_clicked()
 {
-    withdraw = new Withdraw(this);
-    withdraw->show();
+//  MODALESS
+//    withdraw = new Withdraw(this);
+//    withdraw->show();
+
+//  MODAL
+    Withdraw withdraw;
+    withdraw.setModal(true);
+    withdraw.exec();
 }
 
+
+//TESTING AREA
 //==================================================================================
 void MainWindow::on_pushButton_clicked()            //TEST MANIPULATING MONEY VALUES
 {
@@ -79,7 +110,22 @@ void MainWindow::on_pushButton_2_clicked()          //TEST MANIPULATING MONEY VA
 
 void MainWindow::on_pushButton_4_clicked()          //TEST MANIPULATING MONEY VALUES
 {
-    savingsBalance = savingsBalance - 1;
-    ui->labelSBalValue->setNum(savingsBalance);
+    if (savingsBalance - 1 < 0)     //============
+    {
+        Error001 error001;
+        error001.setModal(true);
+        error001.exec();
+    }
+    else
+    {
+        savingsBalance = savingsBalance - 1;
+        ui->labelSBalValue->setNum(savingsBalance);
+    }
 }
 //==================================================================================
+
+
+void MainWindow::on_buttonLogout_clicked()
+{
+    close();
+}
