@@ -33,7 +33,8 @@ SOURCES += \
     transfer.cpp \
     transhistory.cpp \
     withdraw.cpp \
-    error001.cpp
+    error001.cpp \
+    error002.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -43,7 +44,8 @@ HEADERS += \
     transfer.h \
     transhistory.h \
     withdraw.h \
-    error001.h
+    error001.h \
+    error002.h
 
 FORMS += \
         mainwindow.ui \
@@ -53,6 +55,10 @@ FORMS += \
     transfer.ui \
     transhistory.ui \
     withdraw.ui \
-    error001.ui
+    error001.ui \
+    error002.ui
 
 DISTFILES +=
+
+RESOURCES += \
+    BABOJresources.qrc

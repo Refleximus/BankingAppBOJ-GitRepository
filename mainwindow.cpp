@@ -90,27 +90,44 @@ void MainWindow::on_buttonWithdraw_clicked()
 
 //TESTING AREA
 //==================================================================================
-void MainWindow::on_pushButton_clicked()            //TEST MANIPULATING MONEY VALUES
+void MainWindow::on_pushButton_clicked()                         //TEST MANIPULATING MONEY VALUES
 {
     checkingBalance = checkingBalance + 1;
+    moneylog += "+$1(Checking) ";
     ui->labelCBalValue->setNum(checkingBalance);
 }
 
-void MainWindow::on_pushButton_3_clicked()          //TEST MANIPULATING MONEY VALUES
+void MainWindow::on_pushButton_3_clicked()                       //TEST MANIPULATING MONEY VALUES
 {
-    checkingBalance = checkingBalance - 1;
-    ui->labelCBalValue->setNum(checkingBalance);
+    if (checkingBalance - 1 < 0)
+    {
+        Error002 error002;
+        error002.exec();
+        checkingBalance = checkingBalance - 1;
+        checkingBalance = checkingBalance - 10;
+        moneylog += "-$1(Checking) -$10(Overdraft) ";
+        ui->labelCBalValue->setNum(checkingBalance);
+
+    }
+    else
+    {
+        checkingBalance = checkingBalance - 1;
+        moneylog += "-$1(Checking) ";
+        ui->labelCBalValue->setNum(checkingBalance);
+    }
+
 }
 
-void MainWindow::on_pushButton_2_clicked()          //TEST MANIPULATING MONEY VALUES
+void MainWindow::on_pushButton_2_clicked()                       //TEST MANIPULATING MONEY VALUES
 {
     savingsBalance = savingsBalance + 1;
+    moneylog += "+$1(Savings) ";
     ui->labelSBalValue->setNum(savingsBalance);
 }
 
-void MainWindow::on_pushButton_4_clicked()          //TEST MANIPULATING MONEY VALUES
+void MainWindow::on_pushButton_4_clicked()                       //TEST MANIPULATING MONEY VALUES
 {
-    if (savingsBalance - 1 < 0)     //============
+    if (savingsBalance - 1 < 0)                                  //IF -1 FROM savingsBalance MAKES savingsBalance < 0, THROW ERROR
     {
         Error001 error001;
         error001.setModal(true);
@@ -118,9 +135,15 @@ void MainWindow::on_pushButton_4_clicked()          //TEST MANIPULATING MONEY VA
     }
     else
     {
-        savingsBalance = savingsBalance - 1;
-        ui->labelSBalValue->setNum(savingsBalance);
+        savingsBalance = savingsBalance - 1;                    //ELSE REDUCE savingsBalance by 1
+        moneylog += "-$1(Savings) ";                                      //RECORD TO LOG
+        ui->labelSBalValue->setNum(savingsBalance);             //UPDATE LABEL DISPLAYING VALUE OF SAVINGS ACCOUNT
     }
+}
+
+void MainWindow::on_buttonPrintHistory_clicked()              //PRINT MONEYLOG MAINWINDOW
+{
+     ui->textBrowserHistory->setText(moneylog);
 }
 //==================================================================================
 
@@ -129,3 +152,4 @@ void MainWindow::on_buttonLogout_clicked()
 {
     close();
 }
+

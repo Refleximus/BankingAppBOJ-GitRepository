@@ -9,7 +9,7 @@
 #include "transhistory.h"
 #include "withdraw.h"
 #include "error001.h"
-
+#include "error002.h"
 
 namespace Ui {
 class MainWindow;
@@ -22,8 +22,8 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-    double savingsBalance = 0.00;
-    double checkingBalance = 0.00;
+//    double savingsBalance = 0.00;
+//    double checkingBalance = 0.00;
 
 private slots:
 
@@ -47,9 +47,9 @@ private slots:
 
     void on_pushButton_4_clicked();
 
-
-
     void on_buttonLogout_clicked();
+
+    void on_buttonPrintHistory_clicked();
 
 private:
     Ui::MainWindow *ui;
@@ -60,6 +60,12 @@ private:
     TransHistory *transHistory;
     Withdraw *withdraw;
     Error001 *error001;
+    Error002 *error002;
+
+    double savingsBalance = 0.00;
+    double checkingBalance = 0.00;
+    const double overdraftFee = 10.00;
+    QString moneylog;
 };
 
 #endif // MAINWINDOW_H

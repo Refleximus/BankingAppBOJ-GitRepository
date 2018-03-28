@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>if_07_Email_Transfer_1871410.png</file>
+    <file>if_11_Data_Visualization_1871404.png</file>
+    <file>if_15_Insurance_1871406.png</file>
+    <file>if_17_Money_Making_1871405.png</file>
+    <file>if_19_Cashflow_1871412.png</file>
+    <file>if_20_Saving_1871413.png</file>
+  </qresource>
+  <qresource prefix="background">
+    <file>greywoodbg.jpg</file>
+  </qresource>
+</RCC>

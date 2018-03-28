@@ -6,6 +6,8 @@ TransHistory::TransHistory(QWidget *parent) :
     ui(new Ui::TransHistory)
 {
     ui->setupUi(this);
+    //ui->textBrowserHistory->setText(moneylog);
+
 }
 
 TransHistory::~TransHistory()
