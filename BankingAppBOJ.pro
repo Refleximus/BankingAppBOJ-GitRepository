@@ -34,7 +34,8 @@ SOURCES += \
     transhistory.cpp \
     withdraw.cpp \
     error001.cpp \
-    error002.cpp
+    error002.cpp \
+    loginwindow.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -45,7 +46,8 @@ HEADERS += \
     transhistory.h \
     withdraw.h \
     error001.h \
-    error002.h
+    error002.h \
+    loginwindow.h
 
 FORMS += \
         mainwindow.ui \
@@ -56,7 +58,8 @@ FORMS += \
     transhistory.ui \
     withdraw.ui \
     error001.ui \
-    error002.ui
+    error002.ui \
+    loginwindow.ui
 
 DISTFILES +=
 

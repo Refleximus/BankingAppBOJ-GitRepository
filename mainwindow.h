@@ -10,6 +10,8 @@
 #include "withdraw.h"
 #include "error001.h"
 #include "error002.h"
+#include "loginwindow.h"
+
 
 namespace Ui {
 class MainWindow;
@@ -24,6 +26,10 @@ public:
     ~MainWindow();
 //    double savingsBalance = 0.00;
 //    double checkingBalance = 0.00;
+
+//DOUBLE GETTER FOR checkingBalance VARIABLE;
+    double getCheckingBalance() { return checkingBalance; }
+
 
 private slots:
 
@@ -51,7 +57,7 @@ private slots:
 
     void on_buttonPrintHistory_clicked();
 
-private:
+protected:
     Ui::MainWindow *ui;
     CheckingDialog *checkingDialog;
     SavingsDialog *savingsDialog;
@@ -61,11 +67,14 @@ private:
     Withdraw *withdraw;
     Error001 *error001;
     Error002 *error002;
+    //LoginWindow *loginwindow;
 
     double savingsBalance = 0.00;
     double checkingBalance = 0.00;
     const double overdraftFee = 10.00;
     QString moneylog;
+
+    friend class CheckingDialog;
 };
 
 #endif // MAINWINDOW_H
